@@ -1,0 +1,11 @@
+{
+  "deploy": {
+    "project": "03551f9a-cbd7-425d-8e16-613aee470a40",
+    "exclude": [
+      "node_modules",
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "src/deno.mjs"
+  }
+}

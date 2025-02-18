@@ -1,0 +1,28 @@
+{
+  "name": "platform-node-compat",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "collect": "node ./scripts/collect.mjs",
+    "cloudflare:deploy": "wrangler deploy",
+    "cloudflare:dev": "wrangler dev",
+    "deno:deploy": "deployctl deploy --prod --include=src --entrypoint ./src/deno.mjs",
+    "dev": "pnpm node --watch ./src/server.mjs",
+    "netlify:deploy": "netlify deploy --prod",
+    "netlify:dev": "netlify dev",
+    "node-ts": "node --experimental-strip-types --disable-warning=ExperimentalWarning",
+    "vercel:deploy": "vercel --prod",
+    "build": "pnpm vercel-build",
+    "vercel-build": "cp -vr src/vercel/* .vercel && cp -v src/*.mjs .vercel/output/functions/__server.func/"
+  },
+  "devDependencies": {
+    "@types/deno": "^2.0.0",
+    "@types/node": "^22.13.4",
+    "netlify-cli": "^18.1.0",
+    "prettier": "^3.5.1",
+    "srvx": "^0.1.4",
+    "vercel": "^41.1.4",
+    "wrangler": "^3.109.1"
+  },
+  "packageManager": "pnpm@10.4.1"
+}
