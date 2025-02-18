@@ -12,7 +12,6 @@
     "netlify:dev": "netlify dev",
     "node-ts": "node --experimental-strip-types --disable-warning=ExperimentalWarning",
     "vercel:deploy": "vercel --prod",
-    "build": "pnpm vercel-build",
     "vercel-build": "cp -vr src/vercel/* .vercel && cp -v src/*.mjs .vercel/output/functions/__server.func/"
   },
   "devDependencies": {
