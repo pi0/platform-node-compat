@@ -7,7 +7,7 @@
     "cloudflare:deploy": "wrangler deploy",
     "cloudflare:dev": "wrangler dev",
     "deno:deploy": "deployctl deploy --prod --include=src --entrypoint ./src/deno.mjs",
-    "dev": "pnpm node --watch ./src/server.mjs",
+    "dev": "deno -A --watch src/server.mjs",
     "netlify:deploy": "netlify deploy --prod",
     "netlify:dev": "netlify dev",
     "node-ts": "node --experimental-strip-types --disable-warning=ExperimentalWarning",

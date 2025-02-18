@@ -1,14 +1,5 @@
 import nodeCompat from "./node-compat.mjs";
 
-// https://platform-node-compat.pi0.workers.dev/
-
-// https://platform-node-compat.deno.dev/
-
-// https://platform-node-compat.vercel.app/
-
-// https://platform-node-compat.netlify.app/
-
-
 const links = {
   "Cloudflare Workers": "https://platform-node-compat.pi0.workers.dev/",
   "Deno Deploy": "https://platform-node-compat.deno.dev/",
@@ -19,11 +10,14 @@ const links = {
 
 export default async function handler(req) {
   const report = await collectCompat()
-  // return new Response(JSON.stringify(report, null, 2), {
-  //   headers: {
-  //     "content-type": "application/json"
-  //   }
-  // });
+
+  if (req.url.endsWith("?json")) {
+    return new Response(JSON.stringify({ _url: req.url, ...report }, null, 2), {
+      headers: {
+        "content-type": "application/json"
+      }
+    });
+  }
 
   const reportHTML = /* html */ `<!DOCTYPE html>
 <html lang="en">
@@ -83,8 +77,14 @@ export default async function handler(req) {
   <h1>Node.js compat test</h1>
 
   <div>
+    <a href="?json">📤 JSON export</a>
+  </div>
+
+  <div style="background-color: #f0f0f0; padding: 10px; border: 1px solid #ccc; margin-bottom: 20px;">
   Don't rely on data, they might be inaccurate!
   </div>
+
+  <hr/>
 
   <div>
     Compared against Node.js v${nodeCompat.version}
@@ -134,7 +134,7 @@ export default async function handler(req) {
 }
 
 async function collectCompat() {
-  const report = { builtinModules: {}, globals: {} }
+  const report = { version: nodeCompat.version, builtinModules: {}, globals: {} }
 
   report.globals.globalKeys = Object.getOwnPropertyNames(globalThis).sort()
   report.globals.missing = nodeCompat.globals.globalKeys.filter((name) => !(name in globalThis) && !globalThis[name]).sort()
