@@ -81,7 +81,7 @@ export default async function handler(req) {
   </div>
 
   <div style="background-color: #f0f0f0; padding: 10px; border: 1px solid #ccc; margin-bottom: 20px;">
-  Don't rely on data, they might be inaccurate!
+  The computed data has not been verified and may be inaccurate.
   </div>
 
   <hr/>
@@ -121,7 +121,7 @@ export default async function handler(req) {
         <tr style="background-color: ${hasMissingExports ? '#ffffcc' : '#ccffcc'};">
           <td><code>node:${id}</code></td>
           <td>${fmtList(compat.missingExports, !["constants", "process"].includes(id))}</td>
-          <td style="background-color: #ccffcc;">${hasMissingExports ? fmtList(compat.exports) : '<small>all exports available</small>'}</td>
+          <td style="background-color: #ccffcc;">${fmtList(compat.exports)}</td>
         </tr>
       `
   }).join("")}

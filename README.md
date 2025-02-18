@@ -10,10 +10,10 @@ Using this data, we can make "hybrid" presets with [unjs/unenv](https://github.c
 
 This repo was made to develop hybrid presets for [Nitro](https://nitro.dev).
 
-> [!IMPORTANT]
-> Don't rely on data, they might be inaccurate!
+## Reports
 
-## Deployments
+> [!IMPORTANT]
+> The computed data has not been verified and may be inaccurate.
 
 - Cloudflare workers: https://platform-node-compat.pi0.workers.dev/
 - Deno deploy: https://platform-node-compat.deno.dev/
