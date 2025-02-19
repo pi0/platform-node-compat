@@ -1,4 +1,4 @@
-# Platform Node.js compact
+# Platform Node.js compat
 
 Cloudflare Workers, Deno Deploy, Netlify Edge, and Vercel Edge middleware are not Node.js but partially implemented native Node.js compatibility.
 
