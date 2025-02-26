@@ -11,7 +11,7 @@ const links = {
 export default async function handler(req) {
   const report = await collectCompat()
 
-  if (req.url.endsWith("?json")) {
+  if (req.url.includes("?json")) {
     return new Response(JSON.stringify({ _url: req.url, ...report }, null, 2), {
       headers: {
         "content-type": "application/json"
