@@ -98,6 +98,10 @@ export default async function handler(req) {
     Missing Node.js globals: ${report.globals.missing.map(name => `<code>${name}</code>`).join(", ") || 'None!'}
   </div>
 
+  <div>
+    Features: ${Object.entries(report.features).map(([name, value]) => `${value ? '✅' : '❌'} <code>${name}</code>`).join(" | ")}
+  </div>
+
   <table>
     <thead>
       <tr>
@@ -134,10 +138,12 @@ export default async function handler(req) {
 }
 
 async function collectCompat() {
-  const report = { version: nodeCompat.version, builtinModules: {}, globals: {} }
+  const report = { version: nodeCompat.version, builtinModules: {}, globals: {}, features: {} }
 
   report.globals.globalKeys = Object.getOwnPropertyNames(globalThis).sort()
   report.globals.missing = nodeCompat.globals.globalKeys.filter((name) => !(name in globalThis) && !globalThis[name]).sort()
+
+  report.features['process.getBuiltinModule'] = !!process.getBuiltinModule('node:module')
 
   for (const [id, compat] of Object.entries(nodeCompat.modules)) {
     const realModule = await import(`node:${id}`).catch(() => false);
