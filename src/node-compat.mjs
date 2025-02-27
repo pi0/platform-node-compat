@@ -1909,6 +1909,13 @@ export default {
         "Z_SYNC_FLUSH",
         "Z_VERSION_ERROR"
       ]
+    },
+    "sqlite": {
+      "exports": [
+        "DatabaseSync",
+        "StatementSync",
+        "constants"
+      ]
     }
   }
 }
