@@ -143,7 +143,7 @@ async function collectCompat() {
   report.globals.globalKeys = Object.getOwnPropertyNames(globalThis).sort()
   report.globals.missing = nodeCompat.globals.globalKeys.filter((name) => !(name in globalThis) && !globalThis[name]).sort()
 
-  report.features['process.getBuiltinModule'] = !!process.getBuiltinModule('node:module')
+  report.features['process.getBuiltinModule'] = runTest(() => globalThis.process?.getBuiltinModule("process"))
 
   for (const [id, compat] of Object.entries(nodeCompat.modules)) {
     const realModule = await import(`node:${id}`).catch(() => false);
@@ -161,6 +161,15 @@ async function collectCompat() {
     }
   }
   return report
+}
+
+function runTest(fn) {
+  try {
+    return !!fn()
+  } catch (err) {
+    console.error(err);
+    return false;
+  }
 }
 
 function fmtList(list, showAll) {
