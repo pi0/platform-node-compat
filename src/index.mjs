@@ -8,10 +8,10 @@ const links = {
   "GitHub": "https://github.com/pi0/platform-node-compat"
 }
 
-import _process from "node:process"
-
 export default async function handler(req) {
   const report = await collectCompat()
+
+  await import("node:process")
 
   if (req.url.includes("?json")) {
     return new Response(JSON.stringify({ _url: req.url, ...report }, null, 2), {
