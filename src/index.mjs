@@ -146,7 +146,7 @@ async function collectCompat() {
   report.features['process.getBuiltinModule'] = runTest(() => globalThis.process?.getBuiltinModule("process"))
 
   for (const [id, compat] of Object.entries(nodeCompat.modules)) {
-    const realModule = await import(`node:${id}`).catch(() => false);
+    const realModule = globalThis.getVercelBuiltinModule?.(`node:${id}`) || await import(`node:${id}`).catch(() => false);
     if (realModule === false) {
       report.builtinModules[id] = false;
       continue;
