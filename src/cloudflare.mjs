@@ -1,4 +1,4 @@
-import handler from "./_handler.mjs";
+import handler from "./index.mjs";
 
 export default {
   async fetch(request) {

@@ -1,3 +1,3 @@
-import handler from "./_handler.mjs";
+import handler from "./index.mjs";
 
 Deno.serve((req) => handler(req));

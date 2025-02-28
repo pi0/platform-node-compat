@@ -23,7 +23,7 @@ for (const id of [
 const globalKeys = Object.getOwnPropertyNames(globalThis).sort()
 const processKeys = Object.getOwnPropertyNames(process).sort()
 
-await writeFile(new URL("../src/node-compat.mjs", import.meta.url), /* js */ `
+await writeFile(new URL("../src/_node-compat.mjs", import.meta.url), /* js */ `
 // Auto generated with scripts/collect.mjs
 export default ${JSON.stringify({
   version: process.version.slice(1),
