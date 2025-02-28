@@ -19,5 +19,6 @@ const nodeModules = {
 globalThis.getVercelBuiltinModule = (specifier) => nodeModules[specifier];
 
 export default function (req) {
-  return handler(req);
+  return new Response('ok')
+  // return handler(req);
 }
