@@ -116,25 +116,25 @@ export default async function handler(req) {
     </thead>
     <tbody>
       ${Object.entries(report.builtinModules)
-        .map(([id, compat]) => {
-          if (compat === false) {
-            return /* html */ `
+      .map(([id, compat]) => {
+        if (compat === false) {
+          return /* html */ `
         <tr style="background-color: #ffcccc;">
         <td><code>node:${id}</code></td>
         <td colspan=2><small>not available</small></td>
         </tr>
       `;
-          }
-          const hasMissingExports = compat.missingExports.length > 0;
-          return /* html */ `
+        }
+        const hasMissingExports = compat.missingExports.length > 0;
+        return /* html */ `
         <tr style="background-color: ${hasMissingExports ? "#ffffcc" : "#ccffcc"};">
           <td><code>node:${id}</code></td>
           <td>${fmtList(compat.missingExports, !["constants", "process"].includes(id))}</td>
           <td style="background-color: #ccffcc;">${fmtList(compat.exports)}</td>
         </tr>
       `;
-        })
-        .join("")}
+      })
+      .join("")}
     </tbody>
   </table>
 </body>
@@ -157,7 +157,7 @@ async function collectCompat() {
     .sort();
 
   report.features["process.getBuiltinModule"] = runTest(() =>
-    globalThis.process?.getBuiltinModule("process"),
+    globalThis.process?.getBuiltinModule?.("process"),
   );
 
   for (const [id, compat] of Object.entries(nodeCompat.modules)) {
@@ -196,8 +196,8 @@ function runTest(fn) {
 function fmtList(list, showAll) {
   return !showAll && list.length > 15
     ? `${list
-        .slice(0, 5)
-        .map((i) => `<code>${i}</code>`)
-        .join(", ")}, <small>...${list.length - 5} more</small>`
+      .slice(0, 5)
+      .map((i) => `<code>${i}</code>`)
+      .join(", ")}, <small>...${list.length - 5} more</small>`
     : list.map((i) => `<code>${i}</code>`).join(", ");
 }
