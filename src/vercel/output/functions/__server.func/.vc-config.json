@@ -1,4 +1,4 @@
 {
   "runtime": "edge",
-  "entrypoint": "index.mjs"
+  "entrypoint": "vercel.mjs"
 }

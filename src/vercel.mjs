@@ -1,4 +1,4 @@
-import handler from "../../../../index.mjs";
+import handler from "./index.mjs";
 
 // https://vercel.com/docs/functions/edge-middleware/edge-runtime#compatible-node.js-modules
 
