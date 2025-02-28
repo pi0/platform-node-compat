@@ -5,11 +5,12 @@ const links = {
   "Deno Deploy": "https://platform-node-compat.deno.dev/",
   "Netlify Edge": "https://platform-node-compat.netlify.app/",
   "Vercel Edge": "https://platform-node-compat.vercel.app/",
+  "Vercel Edge (dynamic import)": "https://platform-node-compat.vercel.app/?dynamic_import",
   GitHub: "https://github.com/pi0/platform-node-compat",
 };
 
-export default async function handler(req) {
-  const report = await collectCompat();
+export default async function handler(req, getBuiltin) {
+  const report = await collectCompat(getBuiltin);
 
   if (req.url.includes("?json")) {
     return new Response(JSON.stringify({ _url: req.url, ...report }, null, 2), {
@@ -143,7 +144,7 @@ export default async function handler(req) {
   return new Response(reportHTML, { headers: { "content-type": "text/html" } });
 }
 
-async function collectCompat() {
+async function collectCompat(getBuiltin) {
   const report = {
     version: nodeCompat.version,
     builtinModules: {},
@@ -161,8 +162,8 @@ async function collectCompat() {
   );
 
   for (const [id, compat] of Object.entries(nodeCompat.modules)) {
-    let realModule = globalThis.getVercelBuiltinModule
-      ? globalThis.getVercelBuiltinModule(`node:${id}`)
+    let realModule = getBuiltin
+      ? getBuiltin(`node:${id}`)
       : await import(`node:${id}`).catch(() => false);
 
     if (!realModule) {
