@@ -12,7 +12,7 @@
     "netlify:dev": "netlify dev",
     "node-ts": "node --experimental-strip-types --disable-warning=ExperimentalWarning",
     "vercel:deploy": "vercel --prod",
-    "vercel-build": "cp -vr src/vercel/* .vercel && cp -v src/index.mjs src/_node-compat.mjs .vercel/output/functions/__server.func/"
+    "vercel-build": "cp -v src/index.mjs src/_node-compat.mjs .vercel/output/functions/__server.func/ && cp -vr src/vercel/* .vercel"
   },
   "devDependencies": {
     "@types/deno": "^2.0.0",
