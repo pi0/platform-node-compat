@@ -8,6 +8,8 @@ const links = {
   "GitHub": "https://github.com/pi0/platform-node-compat"
 }
 
+await import("node:process").catch(() => { })
+
 export default async function handler(req) {
   const report = await collectCompat()
 
