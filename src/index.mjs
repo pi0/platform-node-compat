@@ -164,7 +164,8 @@ async function collectCompat() {
     let realModule = globalThis.getVercelBuiltinModule
       ? globalThis.getVercelBuiltinModule(`node:${id}`)
       : await import(`node:${id}`).catch(() => false);
-    if (realModule === false) {
+
+    if (!realModule) {
       report.builtinModules[id] = false;
       continue;
     }
