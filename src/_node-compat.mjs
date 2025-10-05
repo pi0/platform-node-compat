@@ -1,8 +1,8 @@
 // Auto generated with scripts/collect.mjs
 export default {
-  version: "22.14.0",
-  globals: {
-    globalKeys: [
+  "version": "22.20.0",
+  "globals": {
+    "globalKeys": [
       "AbortController",
       "AbortSignal",
       "AggregateError",
@@ -131,9 +131,9 @@ export default {
       "setTimeout",
       "structuredClone",
       "undefined",
-      "unescape",
+      "unescape"
     ],
-    processKeys: [
+    "processKeys": [
       "_debugEnd",
       "_debugProcess",
       "_events",
@@ -170,6 +170,7 @@ export default {
       "env",
       "execArgv",
       "execPath",
+      "execve",
       "exit",
       "exitCode",
       "features",
@@ -209,23 +210,29 @@ export default {
       "stderr",
       "stdin",
       "stdout",
+      "threadCpuUsage",
       "title",
       "umask",
       "unref",
       "uptime",
       "version",
-      "versions",
-    ],
+      "versions"
+    ]
   },
-  modules: {
-    _http_agent: {
-      exports: ["Agent", "globalAgent"],
+  "modules": {
+    "_http_agent": {
+      "exports": [
+        "Agent",
+        "globalAgent"
+      ]
     },
-    _http_client: {
-      exports: ["ClientRequest"],
+    "_http_client": {
+      "exports": [
+        "ClientRequest"
+      ]
     },
-    _http_common: {
-      exports: [
+    "_http_common": {
+      "exports": [
         "CRLF",
         "HTTPParser",
         "_checkInvalidHeaderChar",
@@ -237,24 +244,28 @@ export default {
         "kIncomingMessage",
         "methods",
         "parsers",
-        "prepareError",
-      ],
+        "prepareError"
+      ]
     },
-    _http_incoming: {
-      exports: ["IncomingMessage", "readStart", "readStop"],
+    "_http_incoming": {
+      "exports": [
+        "IncomingMessage",
+        "readStart",
+        "readStop"
+      ]
     },
-    _http_outgoing: {
-      exports: [
+    "_http_outgoing": {
+      "exports": [
         "OutgoingMessage",
         "kHighWaterMark",
         "kUniqueHeaders",
         "parseUniqueHeadersOption",
         "validateHeaderName",
-        "validateHeaderValue",
-      ],
+        "validateHeaderValue"
+      ]
     },
-    _http_server: {
-      exports: [
+    "_http_server": {
+      "exports": [
         "STATUS_CODES",
         "Server",
         "ServerResponse",
@@ -263,47 +274,63 @@ export default {
         "kConnectionsCheckingInterval",
         "kServerResponse",
         "setupConnectionsTracking",
-        "storeHTTPOptions",
-      ],
+        "storeHTTPOptions"
+      ]
     },
-    _stream_duplex: {
-      exports: ["from", "fromWeb", "toWeb"],
+    "_stream_duplex": {
+      "exports": [
+        "from",
+        "fromWeb",
+        "toWeb"
+      ]
     },
-    _stream_passthrough: {
-      exports: [],
+    "_stream_passthrough": {
+      "exports": []
     },
-    _stream_readable: {
-      exports: [
+    "_stream_readable": {
+      "exports": [
         "ReadableState",
         "_fromList",
         "from",
         "fromWeb",
         "toWeb",
-        "wrap",
-      ],
+        "wrap"
+      ]
     },
-    _stream_transform: {
-      exports: [],
+    "_stream_transform": {
+      "exports": []
     },
-    _stream_wrap: {
-      exports: [],
-      extraDefaultExports: ["StreamWrap"],
+    "_stream_wrap": {
+      "exports": [],
+      "extraDefaultExports": [
+        "StreamWrap"
+      ]
     },
-    _stream_writable: {
-      exports: ["WritableState", "fromWeb", "toWeb"],
+    "_stream_writable": {
+      "exports": [
+        "WritableState",
+        "fromWeb",
+        "toWeb"
+      ]
     },
-    _tls_common: {
-      exports: [
+    "_tls_common": {
+      "exports": [
         "SecureContext",
         "createSecureContext",
-        "translatePeerCertificate",
-      ],
+        "translatePeerCertificate"
+      ]
     },
-    _tls_wrap: {
-      exports: ["Server", "TLSSocket", "connect", "createServer"],
+    "_tls_wrap": {
+      "exports": [
+        "Server",
+        "TLSSocket",
+        "connect",
+        "createServer"
+      ]
     },
-    assert: {
-      exports: [
+    "assert": {
+      "exports": [
+        "Assert",
         "AssertionError",
         "CallTracker",
         "deepEqual",
@@ -324,11 +351,12 @@ export default {
         "rejects",
         "strict",
         "strictEqual",
-        "throws",
-      ],
+        "throws"
+      ]
     },
     "assert/strict": {
-      exports: [
+      "exports": [
+        "Assert",
         "AssertionError",
         "CallTracker",
         "deepEqual",
@@ -349,22 +377,22 @@ export default {
         "rejects",
         "strict",
         "strictEqual",
-        "throws",
-      ],
+        "throws"
+      ]
     },
-    async_hooks: {
-      exports: [
+    "async_hooks": {
+      "exports": [
         "AsyncLocalStorage",
         "AsyncResource",
         "asyncWrapProviders",
         "createHook",
         "executionAsyncId",
         "executionAsyncResource",
-        "triggerAsyncId",
-      ],
+        "triggerAsyncId"
+      ]
     },
-    buffer: {
-      exports: [
+    "buffer": {
+      "exports": [
         "Blob",
         "Buffer",
         "File",
@@ -378,11 +406,11 @@ export default {
         "kMaxLength",
         "kStringMaxLength",
         "resolveObjectURL",
-        "transcode",
-      ],
+        "transcode"
+      ]
     },
-    child_process: {
-      exports: [
+    "child_process": {
+      "exports": [
         "ChildProcess",
         "_forkChild",
         "exec",
@@ -391,11 +419,11 @@ export default {
         "execSync",
         "fork",
         "spawn",
-        "spawnSync",
-      ],
+        "spawnSync"
+      ]
     },
-    cluster: {
-      exports: [
+    "cluster": {
+      "exports": [
         "SCHED_NONE",
         "SCHED_RR",
         "Worker",
@@ -411,11 +439,11 @@ export default {
         "settings",
         "setupMaster",
         "setupPrimary",
-        "workers",
-      ],
+        "workers"
+      ]
     },
-    console: {
-      exports: [
+    "console": {
+      "exports": [
         "Console",
         "assert",
         "clear",
@@ -440,19 +468,19 @@ export default {
         "timeLog",
         "timeStamp",
         "trace",
-        "warn",
+        "warn"
       ],
-      extraDefaultExports: [
+      "extraDefaultExports": [
         "_ignoreErrors",
         "_stderr",
         "_stderrErrorHandler",
         "_stdout",
         "_stdoutErrorHandler",
-        "_times",
-      ],
+        "_times"
+      ]
     },
-    constants: {
-      exports: [
+    "constants": {
+      "exports": [
         "COPYFILE_EXCL",
         "COPYFILE_FICLONE",
         "COPYFILE_FICLONE_FORCE",
@@ -550,8 +578,6 @@ export default {
         "ETXTBSY",
         "EWOULDBLOCK",
         "EXDEV",
-        "EXTENSIONLESS_FORMAT_JAVASCRIPT",
-        "EXTENSIONLESS_FORMAT_WASM",
         "F_OK",
         "OPENSSL_VERSION_NUMBER",
         "O_APPEND",
@@ -689,11 +715,11 @@ export default {
         "W_OK",
         "X_OK",
         "defaultCipherList",
-        "defaultCoreCipherList",
-      ],
+        "defaultCoreCipherList"
+      ]
     },
-    crypto: {
-      exports: [
+    "crypto": {
+      "exports": [
         "Certificate",
         "Cipher",
         "Cipheriv",
@@ -760,25 +786,34 @@ export default {
         "subtle",
         "timingSafeEqual",
         "verify",
-        "webcrypto",
+        "webcrypto"
       ],
-      extraDefaultExports: ["fips", "prng", "pseudoRandomBytes", "rng"],
+      "extraDefaultExports": [
+        "fips",
+        "prng",
+        "pseudoRandomBytes",
+        "rng"
+      ]
     },
-    dgram: {
-      exports: ["Socket", "_createSocketHandle", "createSocket"],
+    "dgram": {
+      "exports": [
+        "Socket",
+        "_createSocketHandle",
+        "createSocket"
+      ]
     },
-    diagnostics_channel: {
-      exports: [
+    "diagnostics_channel": {
+      "exports": [
         "Channel",
         "channel",
         "hasSubscribers",
         "subscribe",
         "tracingChannel",
-        "unsubscribe",
-      ],
+        "unsubscribe"
+      ]
     },
-    dns: {
-      exports: [
+    "dns": {
+      "exports": [
         "ADDRCONFIG",
         "ADDRGETNETWORKPARAMS",
         "ALL",
@@ -824,14 +859,15 @@ export default {
         "resolvePtr",
         "resolveSoa",
         "resolveSrv",
+        "resolveTlsa",
         "resolveTxt",
         "reverse",
         "setDefaultResultOrder",
-        "setServers",
-      ],
+        "setServers"
+      ]
     },
     "dns/promises": {
-      exports: [
+      "exports": [
         "ADDRGETNETWORKPARAMS",
         "BADFAMILY",
         "BADFLAGS",
@@ -873,17 +909,24 @@ export default {
         "resolvePtr",
         "resolveSoa",
         "resolveSrv",
+        "resolveTlsa",
         "resolveTxt",
         "reverse",
         "setDefaultResultOrder",
-        "setServers",
-      ],
+        "setServers"
+      ]
     },
-    domain: {
-      exports: ["Domain", "_stack", "active", "create", "createDomain"],
+    "domain": {
+      "exports": [
+        "Domain",
+        "_stack",
+        "active",
+        "create",
+        "createDomain"
+      ]
     },
-    events: {
-      exports: [
+    "events": {
+      "exports": [
         "EventEmitter",
         "EventEmitterAsyncResource",
         "addAbortListener",
@@ -898,15 +941,15 @@ export default {
         "on",
         "once",
         "setMaxListeners",
-        "usingDomains",
+        "usingDomains"
       ],
-      extraDefaultExports: [
+      "extraDefaultExports": [
         "kMaxEventTargetListeners",
-        "kMaxEventTargetListenersWarned",
-      ],
+        "kMaxEventTargetListenersWarned"
+      ]
     },
-    fs: {
-      exports: [
+    "fs": {
+      "exports": [
         "Dir",
         "Dirent",
         "F_OK",
@@ -1012,11 +1055,11 @@ export default {
         "writeFileSync",
         "writeSync",
         "writev",
-        "writevSync",
-      ],
+        "writevSync"
+      ]
     },
     "fs/promises": {
-      exports: [
+      "exports": [
         "access",
         "appendFile",
         "chmod",
@@ -1048,11 +1091,11 @@ export default {
         "unlink",
         "utimes",
         "watch",
-        "writeFile",
-      ],
+        "writeFile"
+      ]
     },
-    http: {
-      exports: [
+    "http": {
+      "exports": [
         "Agent",
         "ClientRequest",
         "CloseEvent",
@@ -1072,11 +1115,11 @@ export default {
         "request",
         "setMaxIdleHTTPParsers",
         "validateHeaderName",
-        "validateHeaderValue",
-      ],
+        "validateHeaderValue"
+      ]
     },
-    http2: {
-      exports: [
+    "http2": {
+      "exports": [
         "Http2ServerRequest",
         "Http2ServerResponse",
         "connect",
@@ -1087,43 +1130,45 @@ export default {
         "getPackedSettings",
         "getUnpackedSettings",
         "performServerHandshake",
-        "sensitiveHeaders",
-      ],
+        "sensitiveHeaders"
+      ]
     },
-    https: {
-      exports: [
+    "https": {
+      "exports": [
         "Agent",
         "Server",
         "createServer",
         "get",
         "globalAgent",
-        "request",
-      ],
+        "request"
+      ]
     },
-    inspector: {
-      exports: [
+    "inspector": {
+      "exports": [
         "Network",
+        "NetworkResources",
         "Session",
         "close",
         "console",
         "open",
         "url",
-        "waitForDebugger",
-      ],
+        "waitForDebugger"
+      ]
     },
     "inspector/promises": {
-      exports: [
+      "exports": [
         "Network",
+        "NetworkResources",
         "Session",
         "close",
         "console",
         "open",
         "url",
-        "waitForDebugger",
-      ],
+        "waitForDebugger"
+      ]
     },
-    module: {
-      exports: [
+    "module": {
+      "exports": [
         "Module",
         "SourceMap",
         "_cache",
@@ -1149,15 +1194,21 @@ export default {
         "globalPaths",
         "isBuiltin",
         "register",
+        "registerHooks",
         "runMain",
         "setSourceMapsSupport",
         "stripTypeScriptTypes",
-        "syncBuiltinESMExports",
+        "syncBuiltinESMExports"
       ],
-      extraDefaultExports: ["_readPackage", "_stat", "wrap", "wrapper"],
+      "extraDefaultExports": [
+        "_readPackage",
+        "_stat",
+        "wrap",
+        "wrapper"
+      ]
     },
-    net: {
-      exports: [
+    "net": {
+      "exports": [
         "BlockList",
         "Server",
         "Socket",
@@ -1175,11 +1226,11 @@ export default {
         "isIPv4",
         "isIPv6",
         "setDefaultAutoSelectFamily",
-        "setDefaultAutoSelectFamilyAttemptTimeout",
-      ],
+        "setDefaultAutoSelectFamilyAttemptTimeout"
+      ]
     },
-    os: {
-      exports: [
+    "os": {
+      "exports": [
         "EOL",
         "arch",
         "availableParallelism",
@@ -1202,11 +1253,11 @@ export default {
         "type",
         "uptime",
         "userInfo",
-        "version",
-      ],
+        "version"
+      ]
     },
-    path: {
-      exports: [
+    "path": {
+      "exports": [
         "_makeLong",
         "basename",
         "delimiter",
@@ -1223,11 +1274,11 @@ export default {
         "resolve",
         "sep",
         "toNamespacedPath",
-        "win32",
-      ],
+        "win32"
+      ]
     },
     "path/posix": {
-      exports: [
+      "exports": [
         "_makeLong",
         "basename",
         "delimiter",
@@ -1244,11 +1295,11 @@ export default {
         "resolve",
         "sep",
         "toNamespacedPath",
-        "win32",
-      ],
+        "win32"
+      ]
     },
     "path/win32": {
-      exports: [
+      "exports": [
         "_makeLong",
         "basename",
         "delimiter",
@@ -1265,11 +1316,11 @@ export default {
         "resolve",
         "sep",
         "toNamespacedPath",
-        "win32",
-      ],
+        "win32"
+      ]
     },
-    perf_hooks: {
-      exports: [
+    "perf_hooks": {
+      "exports": [
         "Performance",
         "PerformanceEntry",
         "PerformanceMark",
@@ -1280,11 +1331,11 @@ export default {
         "constants",
         "createHistogram",
         "monitorEventLoopDelay",
-        "performance",
-      ],
+        "performance"
+      ]
     },
-    process: {
-      exports: [
+    "process": {
+      "exports": [
         "_debugEnd",
         "_debugProcess",
         "_events",
@@ -1321,6 +1372,7 @@ export default {
         "env",
         "execArgv",
         "execPath",
+        "execve",
         "exit",
         "exitCode",
         "features",
@@ -1360,30 +1412,38 @@ export default {
         "stderr",
         "stdin",
         "stdout",
+        "threadCpuUsage",
         "title",
         "umask",
         "unref",
         "uptime",
         "version",
-        "versions",
-      ],
+        "versions"
+      ]
     },
-    punycode: {
-      exports: ["decode", "encode", "toASCII", "toUnicode", "ucs2", "version"],
+    "punycode": {
+      "exports": [
+        "decode",
+        "encode",
+        "toASCII",
+        "toUnicode",
+        "ucs2",
+        "version"
+      ]
     },
-    querystring: {
-      exports: [
+    "querystring": {
+      "exports": [
         "decode",
         "encode",
         "escape",
         "parse",
         "stringify",
         "unescape",
-        "unescapeBuffer",
-      ],
+        "unescapeBuffer"
+      ]
     },
-    readline: {
-      exports: [
+    "readline": {
+      "exports": [
         "Interface",
         "clearLine",
         "clearScreenDown",
@@ -1391,26 +1451,32 @@ export default {
         "cursorTo",
         "emitKeypressEvents",
         "moveCursor",
-        "promises",
-      ],
+        "promises"
+      ]
     },
     "readline/promises": {
-      exports: ["Interface", "Readline", "createInterface"],
+      "exports": [
+        "Interface",
+        "Readline",
+        "createInterface"
+      ]
     },
-    repl: {
-      exports: [
+    "repl": {
+      "exports": [
         "REPLServer",
         "REPL_MODE_SLOPPY",
         "REPL_MODE_STRICT",
         "Recoverable",
-        "builtinModules",
         "start",
-        "writer",
+        "writer"
       ],
-      extraDefaultExports: ["_builtinLibs"],
+      "extraDefaultExports": [
+        "_builtinLibs",
+        "builtinModules"
+      ]
     },
-    stream: {
-      exports: [
+    "stream": {
+      "exports": [
         "Duplex",
         "PassThrough",
         "Readable",
@@ -1433,17 +1499,26 @@ export default {
         "isWritable",
         "pipeline",
         "promises",
-        "setDefaultHighWaterMark",
-      ],
+        "setDefaultHighWaterMark"
+      ]
     },
     "stream/consumers": {
-      exports: ["arrayBuffer", "blob", "buffer", "json", "text"],
+      "exports": [
+        "arrayBuffer",
+        "blob",
+        "buffer",
+        "json",
+        "text"
+      ]
     },
     "stream/promises": {
-      exports: ["finished", "pipeline"],
+      "exports": [
+        "finished",
+        "pipeline"
+      ]
     },
     "stream/web": {
-      exports: [
+      "exports": [
         "ByteLengthQueuingStrategy",
         "CompressionStream",
         "CountQueuingStrategy",
@@ -1460,14 +1535,16 @@ export default {
         "TransformStreamDefaultController",
         "WritableStream",
         "WritableStreamDefaultController",
-        "WritableStreamDefaultWriter",
-      ],
+        "WritableStreamDefaultWriter"
+      ]
     },
-    string_decoder: {
-      exports: ["StringDecoder"],
+    "string_decoder": {
+      "exports": [
+        "StringDecoder"
+      ]
     },
-    sys: {
-      exports: [
+    "sys": {
+      "exports": [
         "MIMEParams",
         "MIMEType",
         "TextDecoder",
@@ -1480,6 +1557,7 @@ export default {
         "debug",
         "debuglog",
         "deprecate",
+        "diff",
         "format",
         "formatWithOptions",
         "getCallSite",
@@ -1509,16 +1587,17 @@ export default {
         "parseArgs",
         "parseEnv",
         "promisify",
+        "setTraceSigInt",
         "stripVTControlCharacters",
         "styleText",
         "toUSVString",
         "transferableAbortController",
         "transferableAbortSignal",
-        "types",
-      ],
+        "types"
+      ]
     },
-    timers: {
-      exports: [
+    "timers": {
+      "exports": [
         "_unrefActive",
         "active",
         "clearImmediate",
@@ -1529,14 +1608,19 @@ export default {
         "setImmediate",
         "setInterval",
         "setTimeout",
-        "unenroll",
-      ],
+        "unenroll"
+      ]
     },
     "timers/promises": {
-      exports: ["scheduler", "setImmediate", "setInterval", "setTimeout"],
+      "exports": [
+        "scheduler",
+        "setImmediate",
+        "setInterval",
+        "setTimeout"
+      ]
     },
-    tls: {
-      exports: [
+    "tls": {
+      "exports": [
         "CLIENT_RENEG_LIMIT",
         "CLIENT_RENEG_WINDOW",
         "DEFAULT_CIPHERS",
@@ -1552,34 +1636,44 @@ export default {
         "createSecureContext",
         "createSecurePair",
         "createServer",
+        "getCACertificates",
         "getCiphers",
         "rootCertificates",
-      ],
+        "setDefaultCACertificates"
+      ]
     },
-    trace_events: {
-      exports: ["createTracing", "getEnabledCategories"],
+    "trace_events": {
+      "exports": [
+        "createTracing",
+        "getEnabledCategories"
+      ]
     },
-    tty: {
-      exports: ["ReadStream", "WriteStream", "isatty"],
+    "tty": {
+      "exports": [
+        "ReadStream",
+        "WriteStream",
+        "isatty"
+      ]
     },
-    url: {
-      exports: [
+    "url": {
+      "exports": [
         "URL",
         "URLSearchParams",
         "Url",
         "domainToASCII",
         "domainToUnicode",
         "fileURLToPath",
+        "fileURLToPathBuffer",
         "format",
         "parse",
         "pathToFileURL",
         "resolve",
         "resolveObject",
-        "urlToHttpOptions",
-      ],
+        "urlToHttpOptions"
+      ]
     },
-    util: {
-      exports: [
+    "util": {
+      "exports": [
         "MIMEParams",
         "MIMEType",
         "TextDecoder",
@@ -1592,6 +1686,7 @@ export default {
         "debug",
         "debuglog",
         "deprecate",
+        "diff",
         "format",
         "formatWithOptions",
         "getCallSite",
@@ -1621,16 +1716,17 @@ export default {
         "parseArgs",
         "parseEnv",
         "promisify",
+        "setTraceSigInt",
         "stripVTControlCharacters",
         "styleText",
         "toUSVString",
         "transferableAbortController",
         "transferableAbortSignal",
-        "types",
-      ],
+        "types"
+      ]
     },
     "util/types": {
-      exports: [
+      "exports": [
         "isAnyArrayBuffer",
         "isArgumentsObject",
         "isArrayBuffer",
@@ -1645,6 +1741,7 @@ export default {
         "isDataView",
         "isDate",
         "isExternal",
+        "isFloat16Array",
         "isFloat32Array",
         "isFloat64Array",
         "isGeneratorFunction",
@@ -1672,11 +1769,11 @@ export default {
         "isUint8Array",
         "isUint8ClampedArray",
         "isWeakMap",
-        "isWeakSet",
-      ],
+        "isWeakSet"
+      ]
     },
-    v8: {
-      exports: [
+    "v8": {
+      "exports": [
         "DefaultDeserializer",
         "DefaultSerializer",
         "Deserializer",
@@ -1684,10 +1781,12 @@ export default {
         "Serializer",
         "cachedDataVersionTag",
         "deserialize",
+        "getCppHeapStatistics",
         "getHeapCodeStatistics",
         "getHeapSnapshot",
         "getHeapSpaceStatistics",
         "getHeapStatistics",
+        "isStringOneByteRepresentation",
         "promiseHooks",
         "queryObjects",
         "serialize",
@@ -1696,11 +1795,11 @@ export default {
         "startupSnapshot",
         "stopCoverage",
         "takeCoverage",
-        "writeHeapSnapshot",
-      ],
+        "writeHeapSnapshot"
+      ]
     },
-    vm: {
-      exports: [
+    "vm": {
+      "exports": [
         "Script",
         "compileFunction",
         "constants",
@@ -1710,14 +1809,16 @@ export default {
         "measureMemory",
         "runInContext",
         "runInNewContext",
-        "runInThisContext",
-      ],
+        "runInThisContext"
+      ]
     },
-    wasi: {
-      exports: ["WASI"],
+    "wasi": {
+      "exports": [
+        "WASI"
+      ]
     },
-    worker_threads: {
-      exports: [
+    "worker_threads": {
+      "exports": [
         "BroadcastChannel",
         "MessageChannel",
         "MessagePort",
@@ -1736,11 +1837,12 @@ export default {
         "resourceLimits",
         "setEnvironmentData",
         "threadId",
-        "workerData",
-      ],
+        "threadName",
+        "workerData"
+      ]
     },
-    zlib: {
-      exports: [
+    "zlib": {
+      "exports": [
         "BrotliCompress",
         "BrotliDecompress",
         "Deflate",
@@ -1750,6 +1852,8 @@ export default {
         "Inflate",
         "InflateRaw",
         "Unzip",
+        "ZstdCompress",
+        "ZstdDecompress",
         "brotliCompress",
         "brotliCompressSync",
         "brotliDecompress",
@@ -1766,6 +1870,8 @@ export default {
         "createInflate",
         "createInflateRaw",
         "createUnzip",
+        "createZstdCompress",
+        "createZstdDecompress",
         "deflate",
         "deflateRaw",
         "deflateRawSync",
@@ -1780,8 +1886,12 @@ export default {
         "inflateSync",
         "unzip",
         "unzipSync",
+        "zstdCompress",
+        "zstdCompressSync",
+        "zstdDecompress",
+        "zstdDecompressSync"
       ],
-      extraDefaultExports: [
+      "extraDefaultExports": [
         "DEFLATE",
         "DEFLATERAW",
         "GUNZIP",
@@ -1790,6 +1900,69 @@ export default {
         "INFLATERAW",
         "UNZIP",
         "ZLIB_VERNUM",
+        "ZSTD_CLEVEL_DEFAULT",
+        "ZSTD_COMPRESS",
+        "ZSTD_DECOMPRESS",
+        "ZSTD_btlazy2",
+        "ZSTD_btopt",
+        "ZSTD_btultra",
+        "ZSTD_btultra2",
+        "ZSTD_c_chainLog",
+        "ZSTD_c_checksumFlag",
+        "ZSTD_c_compressionLevel",
+        "ZSTD_c_contentSizeFlag",
+        "ZSTD_c_dictIDFlag",
+        "ZSTD_c_enableLongDistanceMatching",
+        "ZSTD_c_hashLog",
+        "ZSTD_c_jobSize",
+        "ZSTD_c_ldmBucketSizeLog",
+        "ZSTD_c_ldmHashLog",
+        "ZSTD_c_ldmHashRateLog",
+        "ZSTD_c_ldmMinMatch",
+        "ZSTD_c_minMatch",
+        "ZSTD_c_nbWorkers",
+        "ZSTD_c_overlapLog",
+        "ZSTD_c_searchLog",
+        "ZSTD_c_strategy",
+        "ZSTD_c_targetLength",
+        "ZSTD_c_windowLog",
+        "ZSTD_d_windowLogMax",
+        "ZSTD_dfast",
+        "ZSTD_e_continue",
+        "ZSTD_e_end",
+        "ZSTD_e_flush",
+        "ZSTD_error_GENERIC",
+        "ZSTD_error_checksum_wrong",
+        "ZSTD_error_corruption_detected",
+        "ZSTD_error_dictionaryCreation_failed",
+        "ZSTD_error_dictionary_corrupted",
+        "ZSTD_error_dictionary_wrong",
+        "ZSTD_error_dstBuffer_null",
+        "ZSTD_error_dstSize_tooSmall",
+        "ZSTD_error_frameParameter_unsupported",
+        "ZSTD_error_frameParameter_windowTooLarge",
+        "ZSTD_error_init_missing",
+        "ZSTD_error_literals_headerWrong",
+        "ZSTD_error_maxSymbolValue_tooLarge",
+        "ZSTD_error_maxSymbolValue_tooSmall",
+        "ZSTD_error_memory_allocation",
+        "ZSTD_error_noForwardProgress_destFull",
+        "ZSTD_error_noForwardProgress_inputEmpty",
+        "ZSTD_error_no_error",
+        "ZSTD_error_parameter_combination_unsupported",
+        "ZSTD_error_parameter_outOfBound",
+        "ZSTD_error_parameter_unsupported",
+        "ZSTD_error_prefix_unknown",
+        "ZSTD_error_srcSize_wrong",
+        "ZSTD_error_stabilityCondition_notRespected",
+        "ZSTD_error_stage_wrong",
+        "ZSTD_error_tableLog_tooLarge",
+        "ZSTD_error_version_unsupported",
+        "ZSTD_error_workSpace_tooSmall",
+        "ZSTD_fast",
+        "ZSTD_greedy",
+        "ZSTD_lazy",
+        "ZSTD_lazy2",
         "Z_BEST_COMPRESSION",
         "Z_BEST_SPEED",
         "Z_BLOCK",
@@ -1825,11 +1998,16 @@ export default {
         "Z_STREAM_END",
         "Z_STREAM_ERROR",
         "Z_SYNC_FLUSH",
-        "Z_VERSION_ERROR",
-      ],
+        "Z_VERSION_ERROR"
+      ]
     },
-    sqlite: {
-      exports: ["DatabaseSync", "StatementSync", "constants"],
-    },
-  },
-};
+    "sqlite": {
+      "exports": [
+        "DatabaseSync",
+        "StatementSync",
+        "backup",
+        "constants"
+      ]
+    }
+  }
+}
