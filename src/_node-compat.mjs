@@ -220,18 +220,18 @@ export default {
     ]
   },
   "modules": {
-    "_http_agent": {
+    "node:_http_agent": {
       "exports": [
         "Agent",
         "globalAgent"
       ]
     },
-    "_http_client": {
+    "node:_http_client": {
       "exports": [
         "ClientRequest"
       ]
     },
-    "_http_common": {
+    "node:_http_common": {
       "exports": [
         "CRLF",
         "HTTPParser",
@@ -247,14 +247,14 @@ export default {
         "prepareError"
       ]
     },
-    "_http_incoming": {
+    "node:_http_incoming": {
       "exports": [
         "IncomingMessage",
         "readStart",
         "readStop"
       ]
     },
-    "_http_outgoing": {
+    "node:_http_outgoing": {
       "exports": [
         "OutgoingMessage",
         "kHighWaterMark",
@@ -264,7 +264,7 @@ export default {
         "validateHeaderValue"
       ]
     },
-    "_http_server": {
+    "node:_http_server": {
       "exports": [
         "STATUS_CODES",
         "Server",
@@ -277,17 +277,17 @@ export default {
         "storeHTTPOptions"
       ]
     },
-    "_stream_duplex": {
+    "node:_stream_duplex": {
       "exports": [
         "from",
         "fromWeb",
         "toWeb"
       ]
     },
-    "_stream_passthrough": {
+    "node:_stream_passthrough": {
       "exports": []
     },
-    "_stream_readable": {
+    "node:_stream_readable": {
       "exports": [
         "ReadableState",
         "_fromList",
@@ -297,30 +297,30 @@ export default {
         "wrap"
       ]
     },
-    "_stream_transform": {
+    "node:_stream_transform": {
       "exports": []
     },
-    "_stream_wrap": {
+    "node:_stream_wrap": {
       "exports": [],
       "extraDefaultExports": [
         "StreamWrap"
       ]
     },
-    "_stream_writable": {
+    "node:_stream_writable": {
       "exports": [
         "WritableState",
         "fromWeb",
         "toWeb"
       ]
     },
-    "_tls_common": {
+    "node:_tls_common": {
       "exports": [
         "SecureContext",
         "createSecureContext",
         "translatePeerCertificate"
       ]
     },
-    "_tls_wrap": {
+    "node:_tls_wrap": {
       "exports": [
         "Server",
         "TLSSocket",
@@ -328,7 +328,7 @@ export default {
         "createServer"
       ]
     },
-    "assert": {
+    "node:assert": {
       "exports": [
         "Assert",
         "AssertionError",
@@ -354,7 +354,7 @@ export default {
         "throws"
       ]
     },
-    "assert/strict": {
+    "node:assert/strict": {
       "exports": [
         "Assert",
         "AssertionError",
@@ -380,7 +380,7 @@ export default {
         "throws"
       ]
     },
-    "async_hooks": {
+    "node:async_hooks": {
       "exports": [
         "AsyncLocalStorage",
         "AsyncResource",
@@ -391,7 +391,7 @@ export default {
         "triggerAsyncId"
       ]
     },
-    "buffer": {
+    "node:buffer": {
       "exports": [
         "Blob",
         "Buffer",
@@ -409,7 +409,7 @@ export default {
         "transcode"
       ]
     },
-    "child_process": {
+    "node:child_process": {
       "exports": [
         "ChildProcess",
         "_forkChild",
@@ -422,7 +422,7 @@ export default {
         "spawnSync"
       ]
     },
-    "cluster": {
+    "node:cluster": {
       "exports": [
         "SCHED_NONE",
         "SCHED_RR",
@@ -442,7 +442,7 @@ export default {
         "workers"
       ]
     },
-    "console": {
+    "node:console": {
       "exports": [
         "Console",
         "assert",
@@ -479,7 +479,7 @@ export default {
         "_times"
       ]
     },
-    "constants": {
+    "node:constants": {
       "exports": [
         "COPYFILE_EXCL",
         "COPYFILE_FICLONE",
@@ -718,7 +718,7 @@ export default {
         "defaultCoreCipherList"
       ]
     },
-    "crypto": {
+    "node:crypto": {
       "exports": [
         "Certificate",
         "Cipher",
@@ -795,14 +795,14 @@ export default {
         "rng"
       ]
     },
-    "dgram": {
+    "node:dgram": {
       "exports": [
         "Socket",
         "_createSocketHandle",
         "createSocket"
       ]
     },
-    "diagnostics_channel": {
+    "node:diagnostics_channel": {
       "exports": [
         "Channel",
         "channel",
@@ -812,7 +812,7 @@ export default {
         "unsubscribe"
       ]
     },
-    "dns": {
+    "node:dns": {
       "exports": [
         "ADDRCONFIG",
         "ADDRGETNETWORKPARAMS",
@@ -866,7 +866,7 @@ export default {
         "setServers"
       ]
     },
-    "dns/promises": {
+    "node:dns/promises": {
       "exports": [
         "ADDRGETNETWORKPARAMS",
         "BADFAMILY",
@@ -916,7 +916,7 @@ export default {
         "setServers"
       ]
     },
-    "domain": {
+    "node:domain": {
       "exports": [
         "Domain",
         "_stack",
@@ -925,7 +925,7 @@ export default {
         "createDomain"
       ]
     },
-    "events": {
+    "node:events": {
       "exports": [
         "EventEmitter",
         "EventEmitterAsyncResource",
@@ -948,7 +948,7 @@ export default {
         "kMaxEventTargetListenersWarned"
       ]
     },
-    "fs": {
+    "node:fs": {
       "exports": [
         "Dir",
         "Dirent",
@@ -1058,7 +1058,7 @@ export default {
         "writevSync"
       ]
     },
-    "fs/promises": {
+    "node:fs/promises": {
       "exports": [
         "access",
         "appendFile",
@@ -1094,7 +1094,7 @@ export default {
         "writeFile"
       ]
     },
-    "http": {
+    "node:http": {
       "exports": [
         "Agent",
         "ClientRequest",
@@ -1118,7 +1118,7 @@ export default {
         "validateHeaderValue"
       ]
     },
-    "http2": {
+    "node:http2": {
       "exports": [
         "Http2ServerRequest",
         "Http2ServerResponse",
@@ -1133,7 +1133,7 @@ export default {
         "sensitiveHeaders"
       ]
     },
-    "https": {
+    "node:https": {
       "exports": [
         "Agent",
         "Server",
@@ -1143,7 +1143,7 @@ export default {
         "request"
       ]
     },
-    "inspector": {
+    "node:inspector": {
       "exports": [
         "Network",
         "NetworkResources",
@@ -1155,7 +1155,7 @@ export default {
         "waitForDebugger"
       ]
     },
-    "inspector/promises": {
+    "node:inspector/promises": {
       "exports": [
         "Network",
         "NetworkResources",
@@ -1167,7 +1167,7 @@ export default {
         "waitForDebugger"
       ]
     },
-    "module": {
+    "node:module": {
       "exports": [
         "Module",
         "SourceMap",
@@ -1207,7 +1207,7 @@ export default {
         "wrapper"
       ]
     },
-    "net": {
+    "node:net": {
       "exports": [
         "BlockList",
         "Server",
@@ -1229,7 +1229,7 @@ export default {
         "setDefaultAutoSelectFamilyAttemptTimeout"
       ]
     },
-    "os": {
+    "node:os": {
       "exports": [
         "EOL",
         "arch",
@@ -1256,7 +1256,7 @@ export default {
         "version"
       ]
     },
-    "path": {
+    "node:path": {
       "exports": [
         "_makeLong",
         "basename",
@@ -1277,7 +1277,7 @@ export default {
         "win32"
       ]
     },
-    "path/posix": {
+    "node:path/posix": {
       "exports": [
         "_makeLong",
         "basename",
@@ -1298,7 +1298,7 @@ export default {
         "win32"
       ]
     },
-    "path/win32": {
+    "node:path/win32": {
       "exports": [
         "_makeLong",
         "basename",
@@ -1319,7 +1319,7 @@ export default {
         "win32"
       ]
     },
-    "perf_hooks": {
+    "node:perf_hooks": {
       "exports": [
         "Performance",
         "PerformanceEntry",
@@ -1334,7 +1334,7 @@ export default {
         "performance"
       ]
     },
-    "process": {
+    "node:process": {
       "exports": [
         "_debugEnd",
         "_debugProcess",
@@ -1421,7 +1421,7 @@ export default {
         "versions"
       ]
     },
-    "punycode": {
+    "node:punycode": {
       "exports": [
         "decode",
         "encode",
@@ -1431,7 +1431,7 @@ export default {
         "version"
       ]
     },
-    "querystring": {
+    "node:querystring": {
       "exports": [
         "decode",
         "encode",
@@ -1442,7 +1442,7 @@ export default {
         "unescapeBuffer"
       ]
     },
-    "readline": {
+    "node:readline": {
       "exports": [
         "Interface",
         "clearLine",
@@ -1454,14 +1454,14 @@ export default {
         "promises"
       ]
     },
-    "readline/promises": {
+    "node:readline/promises": {
       "exports": [
         "Interface",
         "Readline",
         "createInterface"
       ]
     },
-    "repl": {
+    "node:repl": {
       "exports": [
         "REPLServer",
         "REPL_MODE_SLOPPY",
@@ -1475,7 +1475,7 @@ export default {
         "builtinModules"
       ]
     },
-    "stream": {
+    "node:stream": {
       "exports": [
         "Duplex",
         "PassThrough",
@@ -1502,7 +1502,7 @@ export default {
         "setDefaultHighWaterMark"
       ]
     },
-    "stream/consumers": {
+    "node:stream/consumers": {
       "exports": [
         "arrayBuffer",
         "blob",
@@ -1511,13 +1511,13 @@ export default {
         "text"
       ]
     },
-    "stream/promises": {
+    "node:stream/promises": {
       "exports": [
         "finished",
         "pipeline"
       ]
     },
-    "stream/web": {
+    "node:stream/web": {
       "exports": [
         "ByteLengthQueuingStrategy",
         "CompressionStream",
@@ -1538,12 +1538,12 @@ export default {
         "WritableStreamDefaultWriter"
       ]
     },
-    "string_decoder": {
+    "node:string_decoder": {
       "exports": [
         "StringDecoder"
       ]
     },
-    "sys": {
+    "node:sys": {
       "exports": [
         "MIMEParams",
         "MIMEType",
@@ -1596,7 +1596,7 @@ export default {
         "types"
       ]
     },
-    "timers": {
+    "node:timers": {
       "exports": [
         "_unrefActive",
         "active",
@@ -1611,7 +1611,7 @@ export default {
         "unenroll"
       ]
     },
-    "timers/promises": {
+    "node:timers/promises": {
       "exports": [
         "scheduler",
         "setImmediate",
@@ -1619,7 +1619,7 @@ export default {
         "setTimeout"
       ]
     },
-    "tls": {
+    "node:tls": {
       "exports": [
         "CLIENT_RENEG_LIMIT",
         "CLIENT_RENEG_WINDOW",
@@ -1642,20 +1642,20 @@ export default {
         "setDefaultCACertificates"
       ]
     },
-    "trace_events": {
+    "node:trace_events": {
       "exports": [
         "createTracing",
         "getEnabledCategories"
       ]
     },
-    "tty": {
+    "node:tty": {
       "exports": [
         "ReadStream",
         "WriteStream",
         "isatty"
       ]
     },
-    "url": {
+    "node:url": {
       "exports": [
         "URL",
         "URLSearchParams",
@@ -1672,7 +1672,7 @@ export default {
         "urlToHttpOptions"
       ]
     },
-    "util": {
+    "node:util": {
       "exports": [
         "MIMEParams",
         "MIMEType",
@@ -1725,7 +1725,7 @@ export default {
         "types"
       ]
     },
-    "util/types": {
+    "node:util/types": {
       "exports": [
         "isAnyArrayBuffer",
         "isArgumentsObject",
@@ -1772,7 +1772,7 @@ export default {
         "isWeakSet"
       ]
     },
-    "v8": {
+    "node:v8": {
       "exports": [
         "DefaultDeserializer",
         "DefaultSerializer",
@@ -1798,7 +1798,7 @@ export default {
         "writeHeapSnapshot"
       ]
     },
-    "vm": {
+    "node:vm": {
       "exports": [
         "Script",
         "compileFunction",
@@ -1812,12 +1812,12 @@ export default {
         "runInThisContext"
       ]
     },
-    "wasi": {
+    "node:wasi": {
       "exports": [
         "WASI"
       ]
     },
-    "worker_threads": {
+    "node:worker_threads": {
       "exports": [
         "BroadcastChannel",
         "MessageChannel",
@@ -1841,7 +1841,7 @@ export default {
         "workerData"
       ]
     },
-    "zlib": {
+    "node:zlib": {
       "exports": [
         "BrotliCompress",
         "BrotliDecompress",
@@ -1999,14 +1999,6 @@ export default {
         "Z_STREAM_ERROR",
         "Z_SYNC_FLUSH",
         "Z_VERSION_ERROR"
-      ]
-    },
-    "sqlite": {
-      "exports": [
-        "DatabaseSync",
-        "StatementSync",
-        "backup",
-        "constants"
       ]
     }
   }

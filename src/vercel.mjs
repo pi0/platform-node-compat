@@ -17,8 +17,8 @@ const nodeModules = {
 };
 
 export default async function (req) {
-  if (req.url.includes('dynamic_import')) {
-    return handler(req)
+  if (req.url.includes("dynamic_import")) {
+    return handler(req);
   }
   return handler(req, (id) => nodeModules[id]);
 }
