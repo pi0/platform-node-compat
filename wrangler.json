@@ -1,6 +1,6 @@
 {
   "name": "platform-node-compat",
-  "compatibility_date": "2025-02-18",
+  "compatibility_date": "2025-09-15",
   "main": "./src/cloudflare.mjs",
   "compatibility_flags": [
     "nodejs_compat",

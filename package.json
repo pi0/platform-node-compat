@@ -15,13 +15,13 @@
     "vercel-build": "mkdir -p .vercel/output/functions/__server.func/ && cp -v src/*.mjs .vercel/output/functions/__server.func/ && cp -vr src/vercel/* .vercel"
   },
   "devDependencies": {
-    "@types/deno": "^2.0.0",
-    "@types/node": "^22.13.4",
-    "netlify-cli": "^18.1.0",
-    "prettier": "^3.5.1",
-    "srvx": "^0.1.4",
-    "vercel": "^41.1.4",
-    "wrangler": "^3.109.1"
+    "@types/deno": "^2.5.0",
+    "@types/node": "^24.6.2",
+    "netlify-cli": "^23.9.1",
+    "prettier": "^3.6.2",
+    "srvx": "^0.8.9",
+    "vercel": "^48.2.0",
+    "wrangler": "^4.42.0"
   },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+  "packageManager": "pnpm@10.18.0"
 }
