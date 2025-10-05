@@ -1,6 +1,6 @@
 // Auto generated with scripts/collect.mjs
 export default {
-  "version": "22.20.0",
+  "version": "24.9.0",
   "globals": {
     "globalKeys": [
       "AbortController",
@@ -8,6 +8,7 @@ export default {
       "AggregateError",
       "Array",
       "ArrayBuffer",
+      "AsyncDisposableStack",
       "Atomics",
       "BigInt",
       "BigInt64Array",
@@ -17,6 +18,7 @@ export default {
       "BroadcastChannel",
       "Buffer",
       "ByteLengthQueuingStrategy",
+      "CloseEvent",
       "CompressionStream",
       "CountQueuingStrategy",
       "Crypto",
@@ -26,12 +28,14 @@ export default {
       "DataView",
       "Date",
       "DecompressionStream",
+      "DisposableStack",
       "Error",
       "EvalError",
       "Event",
       "EventTarget",
       "File",
       "FinalizationRegistry",
+      "Float16Array",
       "Float32Array",
       "Float64Array",
       "FormData",
@@ -78,6 +82,7 @@ export default {
       "SharedArrayBuffer",
       "String",
       "SubtleCrypto",
+      "SuppressedError",
       "Symbol",
       "SyntaxError",
       "TextDecoder",
@@ -89,6 +94,7 @@ export default {
       "TypeError",
       "URIError",
       "URL",
+      "URLPattern",
       "URLSearchParams",
       "Uint16Array",
       "Uint32Array",
@@ -155,7 +161,6 @@ export default {
       "arch",
       "argv",
       "argv0",
-      "assert",
       "availableMemory",
       "binding",
       "chdir",
@@ -721,9 +726,7 @@ export default {
     "node:crypto": {
       "exports": [
         "Certificate",
-        "Cipher",
         "Cipheriv",
-        "Decipher",
         "Decipheriv",
         "DiffieHellman",
         "DiffieHellmanGroup",
@@ -734,6 +737,8 @@ export default {
         "Sign",
         "Verify",
         "X509Certificate",
+        "argon2",
+        "argon2Sync",
         "checkPrime",
         "checkPrimeSync",
         "constants",
@@ -749,7 +754,9 @@ export default {
         "createSecretKey",
         "createSign",
         "createVerify",
+        "decapsulate",
         "diffieHellman",
+        "encapsulate",
         "generateKey",
         "generateKeyPair",
         "generateKeyPairSync",
@@ -952,15 +959,12 @@ export default {
       "exports": [
         "Dir",
         "Dirent",
-        "F_OK",
         "FileReadStream",
         "FileWriteStream",
-        "R_OK",
         "ReadStream",
         "Stats",
-        "W_OK",
+        "Utf8Stream",
         "WriteStream",
-        "X_OK",
         "_toUnixTimestamp",
         "access",
         "accessSync",
@@ -1010,6 +1014,7 @@ export default {
         "mkdir",
         "mkdirSync",
         "mkdtemp",
+        "mkdtempDisposableSync",
         "mkdtempSync",
         "open",
         "openAsBlob",
@@ -1056,6 +1061,12 @@ export default {
         "writeSync",
         "writev",
         "writevSync"
+      ],
+      "extraDefaultExports": [
+        "F_OK",
+        "R_OK",
+        "W_OK",
+        "X_OK"
       ]
     },
     "node:fs/promises": {
@@ -1075,6 +1086,7 @@ export default {
         "lutimes",
         "mkdir",
         "mkdtemp",
+        "mkdtempDisposable",
         "open",
         "opendir",
         "readFile",
@@ -1216,7 +1228,6 @@ export default {
         "Stream",
         "_createServerHandle",
         "_normalizeArgs",
-        "_setSimultaneousAccepts",
         "connect",
         "createConnection",
         "createServer",
@@ -1357,7 +1368,6 @@ export default {
         "arch",
         "argv",
         "argv0",
-        "assert",
         "availableMemory",
         "binding",
         "chdir",
@@ -1467,6 +1477,7 @@ export default {
         "REPL_MODE_SLOPPY",
         "REPL_MODE_STRICT",
         "Recoverable",
+        "isValidSyntax",
         "start",
         "writer"
       ],
@@ -1568,22 +1579,7 @@ export default {
         "inherits",
         "inspect",
         "isArray",
-        "isBoolean",
-        "isBuffer",
-        "isDate",
         "isDeepStrictEqual",
-        "isError",
-        "isFunction",
-        "isNull",
-        "isNullOrUndefined",
-        "isNumber",
-        "isObject",
-        "isPrimitive",
-        "isRegExp",
-        "isString",
-        "isSymbol",
-        "isUndefined",
-        "log",
         "parseArgs",
         "parseEnv",
         "promisify",
@@ -1598,17 +1594,13 @@ export default {
     },
     "node:timers": {
       "exports": [
-        "_unrefActive",
-        "active",
         "clearImmediate",
         "clearInterval",
         "clearTimeout",
-        "enroll",
         "promises",
         "setImmediate",
         "setInterval",
-        "setTimeout",
-        "unenroll"
+        "setTimeout"
       ]
     },
     "node:timers/promises": {
@@ -1634,7 +1626,6 @@ export default {
         "connect",
         "convertALPNProtocols",
         "createSecureContext",
-        "createSecurePair",
         "createServer",
         "getCACertificates",
         "getCiphers",
@@ -1658,6 +1649,7 @@ export default {
     "node:url": {
       "exports": [
         "URL",
+        "URLPattern",
         "URLSearchParams",
         "Url",
         "domainToASCII",
@@ -1697,22 +1689,7 @@ export default {
         "inherits",
         "inspect",
         "isArray",
-        "isBoolean",
-        "isBuffer",
-        "isDate",
         "isDeepStrictEqual",
-        "isError",
-        "isFunction",
-        "isNull",
-        "isNullOrUndefined",
-        "isNumber",
-        "isObject",
-        "isPrimitive",
-        "isRegExp",
-        "isString",
-        "isSymbol",
-        "isUndefined",
-        "log",
         "parseArgs",
         "parseEnv",
         "promisify",
@@ -1828,6 +1805,7 @@ export default {
         "isInternalThread",
         "isMainThread",
         "isMarkedAsUntransferable",
+        "locks",
         "markAsUncloneable",
         "markAsUntransferable",
         "moveMessagePortToContext",
@@ -1999,6 +1977,52 @@ export default {
         "Z_STREAM_ERROR",
         "Z_SYNC_FLUSH",
         "Z_VERSION_ERROR"
+      ]
+    },
+    "node:sea": {
+      "exports": [
+        "getAsset",
+        "getAssetAsBlob",
+        "getAssetKeys",
+        "getRawAsset",
+        "isSea"
+      ]
+    },
+    "node:sqlite": {
+      "exports": [
+        "DatabaseSync",
+        "Session",
+        "StatementSync",
+        "backup",
+        "constants"
+      ]
+    },
+    "node:test": {
+      "exports": [
+        "after",
+        "afterEach",
+        "assert",
+        "before",
+        "beforeEach",
+        "describe",
+        "it",
+        "mock",
+        "only",
+        "run",
+        "skip",
+        "snapshot",
+        "suite",
+        "test",
+        "todo"
+      ]
+    },
+    "node:test/reporters": {
+      "exports": [
+        "dot",
+        "junit",
+        "lcov",
+        "spec",
+        "tap"
       ]
     }
   }
